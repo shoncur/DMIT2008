@@ -60,3 +60,61 @@ const pet = (name="Marshmallow", sound="meow") => {
 
 pet();
 pet(...catFuncParams);
+
+// function greeting(name = 'Dolly') {
+//     console.log('Hello ' + name);
+// }
+
+// greeting();
+
+var i = 0;
+
+for (let i = 0; i < 10; i += 1) {
+    // just incrementing i
+}
+
+console.log(i);
+
+let questionname = 'Sally';
+let occupation = 'Biomedical Engineer';
+
+console.log(`${questionname} is a ${occupation}`
+);
+
+function renderGreeting(userName) {
+    console.log('Hello' + userName + '.');
+}
+
+const renderGreeting2 = (userName) => {
+    console.log('Hello ' + userName + '.');
+}
+
+renderGreeting("sarah");
+renderGreeting2("sarah");
+
+// const greeting = (userName) => {
+//     console.log('Hello ' + userName);
+// }
+
+// greeting('Dolly')
+
+let fruits = {
+    apples: 'Apples',
+    blueberries: 'Blueberries',
+    grapes: 'Grapes',
+    nectarines: 'Nectarines',
+    oranges: 'Oranges'
+};
+
+let {apples, grapes, oranges} = fruits;
+console.log(`${apples}, ${grapes}, and ${oranges}`);
+
+fetch('snippet.html')
+    .then(response => console.log(response))
+    .catch(err => console.log('Failed'));
+
+function greeting(name = 'Jon Doe') {
+    console.log('Hello ' + name);
+}
+
+greeting();
