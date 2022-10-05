@@ -1,5 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Typography from '@mui/material/Typography'
+import Container from '@mui/material/Container'
+import JSArticles from '../components/JSArticles'
+import NavBar from '../components/NavBar'
 
 export default function Home() {
   return (
@@ -10,9 +14,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>
-          Assignment 2 - React Components
-        </h1>
+        <Container>
+          <NavBar />
+          <Typography variant='h2' component='h2' color='primary' align='center'>Assignment 2 - React Components</Typography>
+          <Typography color='secondary' align='center'>Here's a list of awesome resources that you can use</Typography>
+          <JSArticles />
+        </Container>
       </main>
     </div>
   )
