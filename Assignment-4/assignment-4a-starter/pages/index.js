@@ -26,6 +26,7 @@ import Navbar from '../components/Navbar'
 
 import { POPULAR_AUTHORS } from '../utils/constants/popular_authors';
 import { getAuthor, getWorks } from '../utils/api/authors';
+import AuthorInfo from '../components/AuthorInfo';
 
 
 export default function Home() {
@@ -36,7 +37,7 @@ export default function Home() {
     birthdate: "31 July 1965",
     deathdate: "unknown"
   })
-  const [worksData, setWorksData] = useState()
+  const [worksData, setWorksData] = useState([])
 
   useEffect(() => {
     changeAuthor()
@@ -46,7 +47,6 @@ export default function Home() {
 
   useEffect(() => {
     changeWorks()
-    console.log(worksData)
   }, [authorKey])
 
   const changeAuthor = () => {
@@ -72,6 +72,7 @@ export default function Home() {
       setWorksData({
         bookname: data.entries.title
       })
+      console.log(worksData)
     })
   }
 
@@ -114,6 +115,7 @@ export default function Home() {
                                 Sample Row
                             </TableCell>
                         </TableRow>
+                        <AuthorInfo title={worksData}/>
                         {/* */}
                     </TableBody>
                     </Table>
